@@ -1,0 +1,30 @@
+h1 {
+    font-family: $tahoma;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+h2 {
+    font-family: $tahoma;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+
+a {
+    color: $light-blue-text;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+p, ul {
+    font-family: $verdana;
+    font-size: 12px;
+}
+
+.text-block {
+    margin-bottom: 20px;
+}
+
+

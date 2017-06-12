@@ -1,0 +1,11 @@
+mixin vitrina(data)
+    +b.SECTION.vitrina
+        - for (var i = 0; i < 6; i++)
+            +e.item
+                +e.item-top
+                    IMG(src='static/img/content/test-img.jpg')
+                    +e.hover-wrap
+                        +e.A(href='#').btn-left Играть
+                        +e.A(href='#').btn-right Демо
+                +e.item-bottom
+                    +e.A(href='#').item-btn Bananas go Bahamas

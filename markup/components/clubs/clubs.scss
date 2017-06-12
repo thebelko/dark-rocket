@@ -1,0 +1,90 @@
+.clubs {
+    &__inner {
+        font-size: 0;
+        margin: 0 -7px;
+    }
+    &__item {
+        position: relative;
+        display: inline-block;
+        margin: 0 7px;
+        margin-bottom: 14px;
+        width: 25%;
+        max-width: 246px;
+
+        font-size: 12px;
+        border-radius: 10px;
+        background: rgba(9, 123, 226, .2);
+    }
+    &__title {
+        padding: 20px 0;
+        font-family: $tahoma;
+        font-size: 20px;
+        font-weight: 700;
+        color: #fff;
+        text-align: center;
+        background: url('../img/general/clubs-title-bg.png') no-repeat 0;
+    }
+    &__img-wrap {
+        padding: 10px 0;
+        line-height: 0;
+        text-align: center;
+    }
+    &__img {
+        position: relative;
+        z-index: 100;
+    }
+    &__text-wrap {
+        padding: 10px 0;
+        background: $dark-blue;
+        font-family: $verdana;
+        font-size: 12px;
+        color: #fff;
+        text-align: center;
+        border-radius: 0 0 10px 10px;
+    }
+    &__hover-block {
+        //display: none;
+        transform: scale(0);
+        transition-property: transform;
+        transition-duration: .5s;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: rgba(9, 123, 226, .5);
+        border-radius: 10px;
+    }
+    &__hover-btn {
+        min-width: 214px;
+        position: absolute;
+        bottom: 12px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        display: inline-block;
+        padding: 12px 16px;
+        font-family: $verdana;
+        font-weight: 700;
+        font-style: italic;
+        font-size: 18px;
+        color: #fff;
+        text-shadow: -1px -1px 0 #000;
+        background: $orange-linear-btn;
+        border-radius: 10px;
+        text-decoration: none;
+        text-align: center;
+        &:hover {
+            background: $orange-linear-btn-hover;
+        }
+        &:active {
+            padding: 10px 16px;
+        }
+    }
+}
+
+.clubs__item:hover {
+    cursor: pointer;
+    .clubs__hover-block {
+        transform: scale(1);
+    }
+}

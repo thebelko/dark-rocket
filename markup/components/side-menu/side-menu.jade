@@ -1,0 +1,13 @@
+include ../../../bemto/bemto
+
+mixin side-menu(data)
+
+    +b.side-menu
+        - var menuItemText = ["Слоты автоматы", "Азартные игры", "Игровые автоматы 777", "Игровые автоматы Гейминатор", "Игровые автоматы Игрософт", "Игровые автоматы на деньги", "Игровые автоматы бесплатно"];
+
+        +e.UL.list
+            +e.LI.list-item
+                +e.A(href='#').list-link.side-menu__list-link--active Казино игровые автоматы
+            for name in menuItemText
+                +e.LI.list-item
+                    +e.A(href='#').list-link= name

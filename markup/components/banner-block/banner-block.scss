@@ -1,0 +1,156 @@
+.banner-block {
+    position: relative;
+    margin-bottom: 12px;
+    width: 100%;
+    box-shadow: 0 0 0 1px #000, 0 0 0 2px #fff, 0 0 7px 3px #0092ff;
+    border-radius: 10px;
+    @include clearfix;
+    &__left {
+        position: relative;
+        z-index: 100;
+        float: left;
+        width: 50%;
+        padding: 36px 0 30px 26px;
+        background: url('../img/content/club-of-month.jpg');
+        background-size: cover;
+        border-radius: 10px 0 0 10px;
+        border-right: 1px solid #000;
+    }
+    &__right {
+        padding: 22px 26px 30px 32px;
+        float: right;
+        width: 50%;
+        background: #020f1f;
+        border-radius: 0 10px 10px 0;
+    }
+}
+
+.month-club {
+    &__title {
+        font-family: $tahoma;
+        font-weight: 700;
+        font-size: 24px;
+        color: #fff;
+        text-shadow: 1px -2px 6px #b900b6, 1px 2px 6px #b900b6;
+    }
+    &__list {
+        margin-bottom: 26px;
+        font-family: $verdana;
+        font-size: 14px;
+        line-height: 28px;
+        color: #fff;
+    }
+    &__btn {
+        padding: 12px 22px;
+        display: inline-block;
+        text-decoration: none;
+        color: #fff;
+        font-family: $verdana;
+        font-weight: 700;
+        font-size: 18px;
+        font-style: italic;
+        background: $green-linear-btn;
+        border-radius: 10px;
+        box-shadow: 0 2px 0 0 #000;
+        text-shadow: -1px -1px 0 #000;
+        &:hover {
+            background: $green-linear-btn-hover;
+        }
+        &:active {
+            padding: 10px 22px;
+            margin: 2px 0;
+            box-shadow: none;
+        }
+    }
+}
+
+.now-play {
+    color: #fff;
+    &__title {
+        margin-bottom: 22px;
+        font-family: $tahoma;
+        font-weight: 700;
+        font-size: 16px;
+        text-shadow: 1px 2px 5px #007cff, -1px -2px 5px #007cff;
+    }
+    &__list-item {
+        padding: 6px;
+        padding-right: 12px;
+        border-top: 1px solid #343e4c;
+        @include clearfix;
+    }
+    &__list-item:last-child {
+        border-bottom: 1px solid #343e4c;
+    }
+    &__list-left {
+        float: left;
+    }
+    &__list-right {
+        float: right;
+    }
+    &__user {
+        display: inline-block;
+        padding: 5px 0;
+    }
+    &__number {
+        display: inline-block;
+        vertical-align: middle;
+        font-family: $verdana;
+        font-weight: 700;
+        font-size: 14px;
+        color: #fff859;
+        text-shadow: 1px 2px 5px #ef6c00, -1px -2px 5px #ef6c00;
+    }
+    &__img {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 0;
+        margin-left: 32px;
+        img {
+            width: 56px;
+            height: 30px;
+            border: 2px solid #6faefa;
+            border-radius: 50%;
+        }
+    }
+}
+
+.rocket-left {
+    display: none;
+    width: 310px;
+    height: 804px;
+    background: url(../img/general/rocket-left.png) no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: -300px;
+    z-index: 50;
+}
+
+.rocket-right {
+    display: none;
+    width: 330px;
+    height: 804px;
+    background: url(../img/general/rocket-right.png) no-repeat;
+    background-size: contain;
+    position: absolute;
+    right: -304px;
+    z-index: 50;
+}
+
+@media (min-width: 1200px) {
+    .rocket-left, .rocket-right {
+        display: block;
+    }
+}
+
+@media (max-width: 1419px) {
+    .rocket-left {
+        width: 200px;
+        left: -196px;
+    }
+    .rocket-right {
+        width: 200px;
+        right: -188px;
+    }
+
+}

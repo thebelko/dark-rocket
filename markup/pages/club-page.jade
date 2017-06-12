@@ -1,0 +1,54 @@
+doctype html
+html(class="no-js", lang="ru")
+
+    include ../../bemto/bemto
+    include ../components/head/head
+    include ../components/footer/footer
+    include ../components/header/header
+    include ../components/clubs/clubs
+    include ../components/banner-block/banner-block
+    include ../components/side-menu/side-menu
+    include ../components/vitrina/vitrina
+
+
+    head
+        +head(head.defaults)
+
+    body
+        div.site-wrapper
+            |%=symbols=%
+
+            +header()
+
+            main.wrapper
+
+                +b.main-block
+                    +e.left
+                        +side-menu()
+
+                    +e.right
+                        .text-block
+                            h1 H1 LA lA la la la ))
+                            img( src='la' width='100' height='70' alt='image')
+                            p текст про клуб текст про клуб текст про клубтекст про клуб текст про клуб
+                            p Lorem ipsum dolor sit amet, <a href='#'>consectetur adipiscing elit</a>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <a href='#'>incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            h2 H2 text text text
+                            ul
+                                li text text
+                                li text text
+                        +vitrina()
+
+
+
+
+
+
+            footer.page__footer
+                +footer()
+
+            script(src='%=static=%js/separate-js/svg4everybody.min.js')
+            script svg4everybody();
+
+            //- Main scripts. You can replace it, but I recommend you to leave it here
+            script(src='%=static=%js/main%=hash=%%=min=%.js')

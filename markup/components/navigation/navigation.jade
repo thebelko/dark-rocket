@@ -1,0 +1,23 @@
+mixin navigation(data)
+    +b.NAV.nav
+        +e.UL.menu
+            +e.LI.item
+                +e.A(href='#').link.nav__link--active Игровой зал
+            +e.LI.item
+                +e.A(href='#').link Азартные игры
+            +e.LI.item
+                +e.A(href='#').link Гаминатор
+            +e.LI.item
+                +e.A(href='#').link.nav__link--arrow Игрософт
+                +e.UL.submenu
+                    +e.LI.submenu-item
+                        +e.A(href='#').submenu-link Азартные игры
+                    +e.LI.submenu-item
+                        +e.A(href='#').submenu-link текст
+                    +e.LI.submenu-item
+                        +e.A(href='#').submenu-link текст
+                    +e.LI.submenu-item
+                        +e.A(href='#').submenu-link текст
+            +e.LI.item
+                +e.A(href='#').link МегаДжек
+

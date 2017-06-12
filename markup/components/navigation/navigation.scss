@@ -1,0 +1,90 @@
+.nav {
+    font-family: $verdana;
+    margin-bottom: 20px;
+    &__menu {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        font-size: 0;
+
+        padding-left: 40px;
+        border-radius: 10px;
+        background-color: $dark-blue;
+    }
+    &__link, &__submenu-link {
+        position: relative;
+        display: inline-block;
+        padding: 12px 18px;
+        color: $light-blue-text;
+        text-decoration: none;
+        transition-property: background-color, color;
+        transition-duration: .5s;
+        &:hover {
+            padding: 10px 18px;
+            color: #fff;
+            background: $hover-blue-bg;
+            border-top: 2px solid $dark-blue;
+            border-bottom: 2px solid $dark-blue;
+        }
+    }
+    &__link--active {
+        background: $active-bg;
+        color: #fff;
+    }
+    &__link--arrow {
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 5px;
+            top: 20px;
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 5px solid $light-blue-text;
+        }
+    }
+    &__item {
+        display: inline-block;
+        vertical-align: top;
+        font-size: 16px;
+        border-right: 1px solid $hover-blue-bg;
+    }
+    &__item:hover {
+        cursor: pointer;
+        .nav__submenu {
+            display: block;
+        }
+        .nav__link--arrow::before {
+            border-top-color: #fff;
+            top: 18px;
+        }
+    }
+    &__submenu {
+        display: none;
+        position: absolute;
+        z-index: 200;
+
+        width: 268px;
+
+        font-size: 0;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        border: 1px solid $hover-blue-bg;
+        background: $dark-blue;
+    }
+    &__submenu-item {
+        font-size: 14px;
+        width: 100%;
+    }
+    &__submenu-link {
+        width: 100%;
+        border-bottom: 1px solid $light-blue-text;
+    }
+    &__submenu-item:last-of-type .nav__submenu-link {
+        border-bottom: none;
+    }
+}

@@ -1,0 +1,12 @@
+mixin clubs(data)
+    +b.SECTION.clubs
+        +e.title Проверенные игровые клубы
+        +e.inner
+            - for (var i = 0; i < 4; i++)
+                +e.item
+                    +e.img-wrap
+                        +e.IMG(src="static/img/content/logo-vulkan.png").img
+                    +e.text-wrap
+                        +e.SPAN.text Шанс выиграть 95%
+                    +e.A(href='#').hover-block
+                        +e.SPAN.hover-btn Играть в клубе

@@ -1,0 +1,99 @@
+.vitrina {
+    font-size: 0;
+    margin: 0 -28px;
+    &__item {
+        margin: 10px 28px;
+        display: inline-block;
+        vertical-align: top;
+    }
+    &__item-top {
+        position: relative;
+        width: 206px;
+        height: 102px;
+        overflow: hidden;
+        border-radius: 100px/50px;
+        box-shadow: 0 0 0 5px #9ec5eb;
+        transition-property: box-shadow;
+        transition-duration: .3s;
+        //&::before {
+        //    content: '';
+        //    z-index: 100;
+        //    position: absolute;
+        //    display: block;
+        //    top: 0;
+        //    bottom: 0;
+        //    left: 0;
+        //    right: 0;
+        //    background: url(../img/general/vitrina-img-border.png) no-repeat;
+        //}
+    }
+    &__hover-wrap {
+        width: 100%;
+        position: absolute;
+        z-index: 300;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0) scale(0);
+        font-family: $verdana;
+        font-weight: 700;
+        font-size: 11px;
+        text-align: center;
+        transition-property: transform;
+        transition-duration: .5s;
+        a {
+            display: inline-block;
+            padding: 10px;
+            color: #fff;
+            text-transform: uppercase;
+            text-decoration: none;
+            text-shadow: -1px -1px 0 #000;
+        }
+    }
+    &__btn-left {
+        @include bg($bg-orange-basic, $repeat: no-repeat);
+        text-align: right;
+        &:hover {
+            cursor: pointer;
+            @include sprite-position($bg-orange-hover);
+        }
+        &:active {
+            @include sprite-position($bg-orange-click);
+        }
+    }
+    &__btn-right {
+        padding-left: 12px !important;
+        @include bg($bg-green-basic, $repeat: no-repeat);
+        text-align: left;
+        &:hover {
+            cursor: pointer;
+            @include sprite-position($bg-green-hover);
+        }
+        &:active {
+            @include sprite-position($bg-green-click);
+        }
+    }
+    img {
+        position: absolute;
+        z-index: 50;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__item-btn {
+        display: block;
+        padding: 20px 0 10px 0;
+        text-align: center;
+        font-family: $verdana;
+        font-size: 12px;
+    }
+}
+
+.vitrina__item:hover {
+    cursor: pointer;
+    .vitrina__item-top {
+        box-shadow: 0 0 0 5px #9ec5eb, 0 0 12px 10px #007FDF;
+    }
+    .vitrina__hover-wrap {
+        transform: translate(-50%, 0) scale(1);
+    }
+}

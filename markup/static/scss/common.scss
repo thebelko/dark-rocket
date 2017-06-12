@@ -1,0 +1,104 @@
+
+body {
+    margin-bottom: 50px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    background: #020f1f url(../img/general/body-main-bg.jpg) no-repeat;
+    background-size: contain;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.wrapper {
+    width: 1027px;
+    margin: 0 auto;
+}
+
+.site-wrapper {
+    overflow: hidden;
+}
+
+.main-block {
+    position: relative;
+    z-index: 150;
+    display: flex;
+    &__left {
+        min-width: 236px;
+        background: #003765;
+        border-radius: 10px 0 0 10px
+    }
+    &__right {
+        padding: 36px 28px;
+        color: #fff;
+        background: $dark-blue;
+        flex-grow: 1;
+        border-radius: 0 10px 10px 0;
+    }
+}
+
+.game-title {
+    width: 610px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.game-block {
+    padding: 12px;
+    margin-bottom: 24px;
+    box-shadow: 0 0 0 1px #000, 0 0 0 2px #fff, 0 0 7px 3px #0092ff;
+    border-radius: 10px;
+    background: #091019;
+    &__frame-wrap {
+        height: 500px;
+    }
+    iframe {
+        width: 100%;
+        height: 500px;
+    }
+    &__btn {
+        display: block;
+        width: 340px;
+        margin: 14px auto;
+        padding: 12px 16px;
+        font-family: $verdana;
+        font-weight: 700;
+        font-style: italic;
+        font-size: 22px;
+        color: #fff;
+        text-shadow: -1px -1px 0 #000;
+        background: $orange-linear-btn;
+        border-radius: 10px;
+        text-decoration: none;
+        text-align: center;
+        &:hover {
+            background: $orange-linear-btn-hover;
+        }
+        &:active {
+            padding: 10px 16px;
+            margin: 16px auto;
+        }
+    }
+}
+
+.text-block {
+    img {
+        float: left;
+        margin: 10px;
+    }
+}
+
+
+
+.footer {
+    color: #fff;
+    text-align: center;
+}

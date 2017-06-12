@@ -1,0 +1,18 @@
+include ../navigation/navigation
+
+mixin header(data)
+    .wrapper
+        +b.HEADER.header
+            +e.top-wrap
+
+                +b.logo
+                    a(href="#")
+                        img(src="static/img/content/logo.png")
+
+                +b.user-block
+                    +e.A(href="#").btn.user-block__btn--reg Зарегистрироваться
+                    +e.A(href="#").btn.user-block__btn--enter Войти
+
+            +e.bottom-wrap
+                +navigation()
+
